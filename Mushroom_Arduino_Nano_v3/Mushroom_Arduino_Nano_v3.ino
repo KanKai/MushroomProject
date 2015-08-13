@@ -59,7 +59,7 @@ void setup()
   pinMode(Relay2, OUTPUT);
   pinMode(Relay3, OUTPUT);
   //pinMode(StatusController, OUTPUT);
-  digitalWrite(Relay1, HIGH);  // แสดงสถานะว่าพร้อมใช้งาน
+  digitalWrite(Relay1, HIGH);  // กำหนดให้อยู่ในสถานะปิด
   digitalWrite(Relay2, HIGH);
   digitalWrite(Relay3, HIGH);
 }
@@ -145,7 +145,7 @@ void loop()
     digitalWrite(ledPin3, LOW);
     digitalWrite(Relay2, HIGH);
   }
-  if(temperature<26){
+  if(temperature<26){     
     Serial.println("Cold");
     lcd.clear();
     lcd.setCursor(0,0);
